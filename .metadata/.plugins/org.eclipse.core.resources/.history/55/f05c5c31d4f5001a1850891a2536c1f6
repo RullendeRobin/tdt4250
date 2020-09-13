@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/tdt4250.sp.model/src" modelPluginID="tdt4250.sp.model"
+    modelName="Sp" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>sp.ecore</foreignModel>
+  <genPackages prefix="Sp" basePackage="tdt4250" disposableProviderFactory="true"
+      ecorePackage="sp.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="sp.ecore#//AcademicLevel">
+      <genEnumLiterals ecoreEnumLiteral="sp.ecore#//AcademicLevel/UNDERGRADUATE"/>
+      <genEnumLiterals ecoreEnumLiteral="sp.ecore#//AcademicLevel/GRADUATE"/>
+      <genEnumLiterals ecoreEnumLiteral="sp.ecore#//AcademicLevel/POST_GRADUATE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="sp.ecore#//CourseType">
+      <genEnumLiterals ecoreEnumLiteral="sp.ecore#//CourseType/OBLIGATORY"/>
+      <genEnumLiterals ecoreEnumLiteral="sp.ecore#//CourseType/ELECTIVE_COLLISION_FREE"/>
+      <genEnumLiterals ecoreEnumLiteral="sp.ecore#//CourseType/ELECTIVE_CAN_COLLIDE"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="sp.ecore#//CourseCode"/>
+    <genClasses ecoreClass="sp.ecore#//Course">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//Course/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//Course/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//Course/credit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//Course/level"/>
+    </genClasses>
+    <genClasses ecoreClass="sp.ecore#//Program">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//Program/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//Program/code"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sp.ecore#//Program/specializations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sp.ecore#//Program/semesters"/>
+    </genClasses>
+    <genClasses ecoreClass="sp.ecore#//Specialization">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//Specialization/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sp.ecore#//Specialization/semesters"/>
+    </genClasses>
+    <genClasses ecoreClass="sp.ecore#//University">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sp.ecore#//University/courses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sp.ecore#//University/programs"/>
+    </genClasses>
+    <genClasses ecoreClass="sp.ecore#//CourseGroup">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sp.ecore#//CourseGroup/courses"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//CourseGroup/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//CourseGroup/type"/>
+    </genClasses>
+    <genClasses ecoreClass="sp.ecore#//Semester"/>
+  </genPackages>
+</genmodel:GenModel>

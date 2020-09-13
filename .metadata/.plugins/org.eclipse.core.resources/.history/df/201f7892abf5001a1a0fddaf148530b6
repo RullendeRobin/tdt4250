@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sp:University
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:sp="platform:/plugin/tdt4250.sp.model/model/sp.ecore"
+    xsi:schemaLocation="platform:/plugin/tdt4250.sp.model/model/sp.ecore sp.ecore">
+  <courses code="TDT4250"
+      name="Advanced Design"
+      credit="7.5"/>
+  <programs
+      name="Datateknologi"
+      code="MTDT"/>
+</sp:University>

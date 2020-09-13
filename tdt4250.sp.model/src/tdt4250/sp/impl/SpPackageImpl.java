@@ -567,6 +567,8 @@ public class SpPackageImpl extends EPackageImpl implements SpPackage {
 		createEcoreAnnotations();
 		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
 		createExtendedMetaDataAnnotations();
+		// http://www.eclipse.org/acceleo/query/1.0
+		create_1Annotations();
 	}
 
 	/**
@@ -583,6 +585,18 @@ public class SpPackageImpl extends EPackageImpl implements SpPackage {
 		   new String[] {
 			   "validationDelegates", "http://www.eclipse.org/acceleo/query/1.0"
 		   });
+		addAnnotation
+		  (specializationEClass,
+		   source,
+		   new String[] {
+			   "constraints", "hasEnoughGraduateCourses"
+		   });
+		addAnnotation
+		  (semesterEClass,
+		   source,
+		   new String[] {
+			   "constraints", "semesterHasEnoughCredits"
+		   });
 	}
 
 	/**
@@ -598,6 +612,22 @@ public class SpPackageImpl extends EPackageImpl implements SpPackage {
 		   source,
 		   new String[] {
 			   "pattern", "[a-z\u00e6\u00f8\u00e5A-Z\u00c6\u00d8\u00c5]+[0-9]+"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/acceleo/query/1.0</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void create_1Annotations() {
+		String source = "http://www.eclipse.org/acceleo/query/1.0";
+		addAnnotation
+		  (semesterEClass,
+		   source,
+		   new String[] {
+			   "semesterHasEnoughCredits", "self.courseGroups.courses.credit -> sum() >= 30.0"
 		   });
 	}
 

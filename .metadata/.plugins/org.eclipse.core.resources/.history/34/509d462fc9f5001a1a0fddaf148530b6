@@ -1,0 +1,31 @@
+package sp.examples;
+
+import java.awt.RadialGradientPaint;
+import java.text.StringCharacterIterator;
+
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.util.EDataTypeEList;
+
+import sp.Course;
+import sp.CourseType;
+import sp.SpFactory;
+import sp.University;
+import sp.impl.SpFactoryImpl;
+import sp.impl.SpPackageImpl;
+
+public class TestManualCodeExample {
+	
+	public static void main(String[] args) {
+		
+		CourseCode 
+		
+		University university = SpFactory.eINSTANCE.createUniversity();
+		Course course = SpFactory.eINSTANCE.createCourse();
+		String code = SpFactory.eINSTANCE.createFromString(SpPackageImpl.COURSE__CODE, "TDT4250");
+		course.setCode(code);
+		
+		
+		
+	}
+
+}

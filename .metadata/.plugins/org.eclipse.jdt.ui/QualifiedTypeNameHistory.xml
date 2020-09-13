@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.ResourceSet"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.ResourceImpl"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.ResourceSetImpl"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.common.util.URI"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.EObject"/>
+    <fullyQualifiedTypeName name="tdt4250.ra.RaPackage"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl"/>
+    <fullyQualifiedTypeName name="tdt4250.ra.ResourceAllocation"/>
+    <fullyQualifiedTypeName name="tdt4250.ra.Person"/>
+    <fullyQualifiedTypeName name="tdt4250.ra.RaFactory"/>
+    <fullyQualifiedTypeName name="sp.University"/>
+    <fullyQualifiedTypeName name="java.awt.RadialGradientPaint"/>
+    <fullyQualifiedTypeName name="sp.Course"/>
+    <fullyQualifiedTypeName name="java.lang.Deprecated"/>
+    <fullyQualifiedTypeName name="sp.impl.SpFactoryImpl"/>
+    <fullyQualifiedTypeName name="java.text.StringCharacterIterator"/>
+    <fullyQualifiedTypeName name="sp.SpPackage"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.EDataType"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.EDataType.Internal"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.util.EDataTypeEList"/>
+    <fullyQualifiedTypeName name="sp.SpFactory"/>
+    <fullyQualifiedTypeName name="sp.CourseType"/>
+    <fullyQualifiedTypeName name="sp.impl.SpPackageImpl"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.I2F"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="tdt4250.sp.Course"/>
+    <fullyQualifiedTypeName name="tdt4250.sp.SpFactory"/>
+</qualifiedTypeNameHistroy>

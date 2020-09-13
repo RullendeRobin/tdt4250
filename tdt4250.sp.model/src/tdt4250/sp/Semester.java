@@ -20,7 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see tdt4250.sp.SpPackage#getSemester()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='semesterHasEnoughCredits'"
+ *        annotation="http://www.eclipse.org/acceleo/query/1.0 semesterHasEnoughCredits='self.courseGroups.courses.credit -&gt; sum() &gt;= 30.0'"
  * @generated
  */
 public interface Semester extends EObject {

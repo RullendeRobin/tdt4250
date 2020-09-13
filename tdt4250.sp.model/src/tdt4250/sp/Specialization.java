@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see tdt4250.sp.SpPackage#getSpecialization()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='hasEnoughGraduateCourses'"
  * @generated
  */
 public interface Specialization extends EObject {

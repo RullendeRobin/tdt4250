@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sp:University
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:sp="platform:/plugin/tdt4250.sp.model/model/sp.ecore"
+    xsi:schemaLocation="platform:/plugin/tdt4250.sp.model/model/sp.ecore ../../../../model/sp.ecore">
+  <courses code="TDT4250"
+      name="Advanced Software Design"
+      credit="15.0"
+      level="GRADUATE"/>
+  <courses code="IT2810"
+      name="Webutvikling"
+      credit="15.0"/>
+  <programs
+      name="Computer science"
+      code="MTDT"
+      numberOfSemesters="10">
+    <specializations
+        name="Software Development"
+        semesters="//@programs.0/@semesters.0"/>
+    <semesters
+        semesterID="7">
+      <courseGroups
+          courses="//@courses.0"/>
+    </semesters>
+    <semesters
+        semesterID="5">
+      <courseGroups
+          courses="//@courses.1"
+          type="ELECTIVE_COLLISION_FREE"/>
+      <courseGroups
+          courses="//@courses.0"/>
+    </semesters>
+  </programs>
+</sp:University>

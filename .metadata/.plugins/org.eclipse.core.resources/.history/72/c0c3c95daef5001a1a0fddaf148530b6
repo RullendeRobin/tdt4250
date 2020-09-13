@@ -1,0 +1,51 @@
+/**
+ */
+package sp;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>University</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link sp.University#getCourses <em>Courses</em>}</li>
+ *   <li>{@link sp.University#getPrograms <em>Programs</em>}</li>
+ * </ul>
+ *
+ * @see sp.SpPackage#getUniversity()
+ * @model
+ * @generated
+ */
+public interface University extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Courses</b></em>' reference list.
+	 * The list contents are of type {@link sp.Course}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Courses</em>' reference list.
+	 * @see sp.SpPackage#getUniversity_Courses()
+	 * @model
+	 * @generated
+	 */
+	EList<Course> getCourses();
+
+	/**
+	 * Returns the value of the '<em><b>Programs</b></em>' reference list.
+	 * The list contents are of type {@link sp.Program}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Programs</em>' reference list.
+	 * @see sp.SpPackage#getUniversity_Programs()
+	 * @model
+	 * @generated
+	 */
+	EList<Program> getPrograms();
+
+} // University

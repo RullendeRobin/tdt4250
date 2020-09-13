@@ -1,0 +1,22 @@
+package tdt4250.examples;
+
+
+import tdt4250.sp.Course;
+import tdt4250.sp.CourseGroup;
+import tdt4250.sp.Semester;
+import tdt4250.sp.SpFactory;
+
+public class ManualCode {
+	
+	public static void main(String[] args) {
+		Course course = SpFactory.eINSTANCE.createCourse();
+		Semester semester = SpFactory.eINSTANCE.createSemester();
+		CourseGroup courseGroup = SpFactory.eINSTANCE.createCourseGroup();
+		course.setCredit(7.5f);
+		semester.getCourseGroups().add(courseGroup);
+		courseGroup.getCourses().add(course);
+		System.out.println(semester.getTotalCredits());
+		
+	}
+
+}
