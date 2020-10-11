@@ -23,8 +23,8 @@ import tdt4250.sp.SpPackage;
  * <ul>
  *   <li>{@link tdt4250.sp.impl.CourseImpl#getCode <em>Code</em>}</li>
  *   <li>{@link tdt4250.sp.impl.CourseImpl#getName <em>Name</em>}</li>
- *   <li>{@link tdt4250.sp.impl.CourseImpl#getCredit <em>Credit</em>}</li>
  *   <li>{@link tdt4250.sp.impl.CourseImpl#getLevel <em>Level</em>}</li>
+ *   <li>{@link tdt4250.sp.impl.CourseImpl#getCredit <em>Credit</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,26 +71,6 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCredit() <em>Credit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCredit()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double CREDIT_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getCredit() <em>Credit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCredit()
-	 * @generated
-	 * @ordered
-	 */
-	protected double credit = CREDIT_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getLevel() <em>Level</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -109,6 +89,26 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * @ordered
 	 */
 	protected AcademicLevel level = LEVEL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCredit() <em>Credit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCredit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float CREDIT_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getCredit() <em>Credit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCredit()
+	 * @generated
+	 * @ordered
+	 */
+	protected float credit = CREDIT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -176,7 +176,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getCredit() {
+	public float getCredit() {
 		return credit;
 	}
 
@@ -185,8 +185,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCredit(double newCredit) {
-		double oldCredit = credit;
+	public void setCredit(float newCredit) {
+		float oldCredit = credit;
 		credit = newCredit;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SpPackage.COURSE__CREDIT, oldCredit, credit));
@@ -225,10 +225,10 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				return getCode();
 			case SpPackage.COURSE__NAME:
 				return getName();
-			case SpPackage.COURSE__CREDIT:
-				return getCredit();
 			case SpPackage.COURSE__LEVEL:
 				return getLevel();
+			case SpPackage.COURSE__CREDIT:
+				return getCredit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -247,11 +247,11 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 			case SpPackage.COURSE__NAME:
 				setName((String)newValue);
 				return;
-			case SpPackage.COURSE__CREDIT:
-				setCredit((Double)newValue);
-				return;
 			case SpPackage.COURSE__LEVEL:
 				setLevel((AcademicLevel)newValue);
+				return;
+			case SpPackage.COURSE__CREDIT:
+				setCredit((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -271,11 +271,11 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 			case SpPackage.COURSE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SpPackage.COURSE__CREDIT:
-				setCredit(CREDIT_EDEFAULT);
-				return;
 			case SpPackage.COURSE__LEVEL:
 				setLevel(LEVEL_EDEFAULT);
+				return;
+			case SpPackage.COURSE__CREDIT:
+				setCredit(CREDIT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -293,10 +293,10 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 			case SpPackage.COURSE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SpPackage.COURSE__CREDIT:
-				return credit != CREDIT_EDEFAULT;
 			case SpPackage.COURSE__LEVEL:
 				return level != LEVEL_EDEFAULT;
+			case SpPackage.COURSE__CREDIT:
+				return credit != CREDIT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -315,10 +315,10 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 		result.append(code);
 		result.append(", name: ");
 		result.append(name);
-		result.append(", credit: ");
-		result.append(credit);
 		result.append(", level: ");
 		result.append(level);
+		result.append(", credit: ");
+		result.append(credit);
 		result.append(')');
 		return result.toString();
 	}

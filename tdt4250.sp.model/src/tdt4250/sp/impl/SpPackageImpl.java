@@ -198,7 +198,7 @@ public class SpPackageImpl extends EPackageImpl implements SpPackage {
 	 * @generated
 	 */
 	public EAttribute getCourse_Credit() {
-		return (EAttribute)courseEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)courseEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -207,7 +207,7 @@ public class SpPackageImpl extends EPackageImpl implements SpPackage {
 	 * @generated
 	 */
 	public EAttribute getCourse_Level() {
-		return (EAttribute)courseEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)courseEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -332,6 +332,24 @@ public class SpPackageImpl extends EPackageImpl implements SpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getUniversity_Name() {
+		return (EAttribute)universityEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUniversity_ShortName() {
+		return (EAttribute)universityEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCourseGroup() {
 		return courseGroupEClass;
 	}
@@ -448,8 +466,8 @@ public class SpPackageImpl extends EPackageImpl implements SpPackage {
 		courseEClass = createEClass(COURSE);
 		createEAttribute(courseEClass, COURSE__CODE);
 		createEAttribute(courseEClass, COURSE__NAME);
-		createEAttribute(courseEClass, COURSE__CREDIT);
 		createEAttribute(courseEClass, COURSE__LEVEL);
+		createEAttribute(courseEClass, COURSE__CREDIT);
 
 		programmeEClass = createEClass(PROGRAMME);
 		createEAttribute(programmeEClass, PROGRAMME__NAME);
@@ -466,6 +484,8 @@ public class SpPackageImpl extends EPackageImpl implements SpPackage {
 		universityEClass = createEClass(UNIVERSITY);
 		createEReference(universityEClass, UNIVERSITY__COURSES);
 		createEReference(universityEClass, UNIVERSITY__PROGRAMS);
+		createEAttribute(universityEClass, UNIVERSITY__NAME);
+		createEAttribute(universityEClass, UNIVERSITY__SHORT_NAME);
 
 		courseGroupEClass = createEClass(COURSE_GROUP);
 		createEReference(courseGroupEClass, COURSE_GROUP__COURSES);
@@ -517,8 +537,8 @@ public class SpPackageImpl extends EPackageImpl implements SpPackage {
 		initEClass(courseEClass, Course.class, "Course", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCourse_Code(), this.getCourseCode(), "code", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Name(), ecorePackage.getEString(), "name", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCourse_Credit(), ecorePackage.getEDouble(), "credit", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Level(), this.getAcademicLevel(), "level", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCourse_Credit(), ecorePackage.getEFloat(), "credit", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(programmeEClass, Programme.class, "Programme", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProgramme_Name(), ecorePackage.getEString(), "name", null, 0, 1, Programme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -535,6 +555,8 @@ public class SpPackageImpl extends EPackageImpl implements SpPackage {
 		initEClass(universityEClass, University.class, "University", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUniversity_Courses(), this.getCourse(), null, "courses", null, 0, -1, University.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUniversity_Programs(), this.getProgramme(), null, "programs", null, 0, -1, University.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUniversity_Name(), ecorePackage.getEString(), "name", null, 0, 1, University.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUniversity_ShortName(), ecorePackage.getEString(), "shortName", null, 0, 1, University.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(courseGroupEClass, CourseGroup.class, "CourseGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCourseGroup_Courses(), this.getCourse(), null, "courses", null, 0, -1, CourseGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

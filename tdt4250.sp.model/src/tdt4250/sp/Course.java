@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link tdt4250.sp.Course#getCode <em>Code</em>}</li>
  *   <li>{@link tdt4250.sp.Course#getName <em>Name</em>}</li>
- *   <li>{@link tdt4250.sp.Course#getCredit <em>Credit</em>}</li>
  *   <li>{@link tdt4250.sp.Course#getLevel <em>Level</em>}</li>
+ *   <li>{@link tdt4250.sp.Course#getCredit <em>Credit</em>}</li>
  * </ul>
  *
  * @see tdt4250.sp.SpPackage#getCourse()
@@ -73,12 +73,12 @@ public interface Course extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Credit</em>' attribute.
-	 * @see #setCredit(double)
+	 * @see #setCredit(float)
 	 * @see tdt4250.sp.SpPackage#getCourse_Credit()
 	 * @model
 	 * @generated
 	 */
-	double getCredit();
+	float getCredit();
 
 	/**
 	 * Sets the value of the '{@link tdt4250.sp.Course#getCredit <em>Credit</em>}' attribute.
@@ -88,7 +88,7 @@ public interface Course extends EObject {
 	 * @see #getCredit()
 	 * @generated
 	 */
-	void setCredit(double value);
+	void setCredit(float value);
 
 	/**
 	 * Returns the value of the '<em><b>Level</b></em>' attribute.

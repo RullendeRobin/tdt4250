@@ -88,22 +88,22 @@ public interface SpPackage extends EPackage {
 	int COURSE__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Credit</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COURSE__CREDIT = 2;
-
-	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE__LEVEL = 3;
+	int COURSE__LEVEL = 2;
+
+	/**
+	 * The feature id for the '<em><b>Credit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__CREDIT = 3;
 
 	/**
 	 * The number of structural features of the '<em>Course</em>' class.
@@ -280,13 +280,31 @@ public interface SpPackage extends EPackage {
 	int UNIVERSITY__PROGRAMS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIVERSITY__NAME = 2;
+
+	/**
+	 * The feature id for the '<em><b>Short Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIVERSITY__SHORT_NAME = 3;
+
+	/**
 	 * The number of structural features of the '<em>University</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIVERSITY_FEATURE_COUNT = 2;
+	int UNIVERSITY_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>University</em>' class.
@@ -624,6 +642,28 @@ public interface SpPackage extends EPackage {
 	EReference getUniversity_Programs();
 
 	/**
+	 * Returns the meta object for the attribute '{@link tdt4250.sp.University#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see tdt4250.sp.University#getName()
+	 * @see #getUniversity()
+	 * @generated
+	 */
+	EAttribute getUniversity_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link tdt4250.sp.University#getShortName <em>Short Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Short Name</em>'.
+	 * @see tdt4250.sp.University#getShortName()
+	 * @see #getUniversity()
+	 * @generated
+	 */
+	EAttribute getUniversity_ShortName();
+
+	/**
 	 * Returns the meta object for class '{@link tdt4250.sp.CourseGroup <em>Course Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -904,6 +944,22 @@ public interface SpPackage extends EPackage {
 		 * @generated
 		 */
 		EReference UNIVERSITY__PROGRAMS = eINSTANCE.getUniversity_Programs();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIVERSITY__NAME = eINSTANCE.getUniversity_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Short Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIVERSITY__SHORT_NAME = eINSTANCE.getUniversity_ShortName();
 
 		/**
 		 * The meta object literal for the '{@link tdt4250.sp.impl.CourseGroupImpl <em>Course Group</em>}' class.

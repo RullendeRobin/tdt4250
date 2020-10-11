@@ -4,32 +4,195 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:sp="platform:/plugin/tdt4250.sp.model/model/sp.ecore"
-    xsi:schemaLocation="platform:/plugin/tdt4250.sp.model/model/sp.ecore sp.ecore">
-  <courses code="TDT4250"
-      name="Advanced Software Design"
-      credit="15.0"/>
+    xsi:schemaLocation="platform:/plugin/tdt4250.sp.model/model/sp.ecore sp.ecore"
+    name="Norwegian University of Technology"
+    shortName="NTNU">
+  <courses code="EXPH0004"
+      name="Examen philosophicum for naturvitenskap og teknologi"
+      credit="7.5"/>
+  <courses code="TDT4110"
+      name="Informasjonsteknologi, grunnkurs"
+      credit="7.5"/>
+  <courses code="TMA4100"
+      name="Matematikk 1"
+      credit="7.5"/>
+  <courses code="TMA4140"
+      name="Diskret matematikk"
+      credit="7.5"/>
+  <courses code="TDT4100"
+      name="Objektorientert programmering"
+      credit="7.5"/>
+  <courses code="TDT4112"
+      name="Programmeringslab for datateknologi"
+      credit="7.5"/>
+  <courses code="TFE4101"
+      name="Krets- og digitalteknikk"
+      credit="7.5"/>
+  <courses code="TMA4115"
+      name="Matematikk 3"
+      credit="7.5"/>
+  <courses code="TDT4113"
+      name="Datateknologi, programmeringsprosjekt"
+      credit="7.5"/>
+  <courses code="TDT4120"
+      name="Algoritmer og datastrukturer"
+      credit="7.5"/>
+  <courses code="TDT4160"
+      name="Datamaskiner og digitalteknikk"
+      credit="7.5"/>
+  <courses code="TMA4240"
+      name="Statistikk"
+      credit="7.5"/>
+  <courses code="TDT4140"
+      name="Programvareutvikling"
+      credit="7.5"/>
+  <courses code="TDT4145"
+      name="Datamodellering og databasesystemer"
+      credit="7.5"/>
+  <courses code="TDT4180"
+      name="Menneskemaskin-interaksjon"
+      credit="7.5"/>
+  <courses code="TTM4100"
+      name="Kommunikasjon - Tjenester og nett"
+      credit="7.5"/>
+  <courses code="TDT4136"
+      name="Introduksjon til kunstig intelligens"
+      credit="7.5"/>
+  <courses code="TDT4175"
+      name="Informasjonssystemer"
+      credit="7.5"/>
+  <courses code="TMA4135"
+      name="Matematikk 4D"
+      credit="7.5"/>
   <courses code="IT2810"
       name="Webutvikling"
+      credit="7.5"/>
+  <courses code="TDT4186"
+      name="Operativsystemer"
+      credit="7.5"/>
+  <courses code="TDT4240"
+      name="Programvarearkitektur"
+      credit="7.5"/>
+  <courses code="TFY4125"
+      name="Fysikk"
+      credit="7.5"/>
+  <courses code="TIØ4258"
+      name="Teknologiledelse"
+      credit="7.5"/>
+  <courses code="TDT4250"
+      name="Avansert programvaredesign"
+      level="GRADUATE"
+      credit="7.5"/>
+  <courses code="TDT4290"
+      name="Kundestyrt prosjekt"
+      level="GRADUATE"
       credit="15.0"/>
+  <courses code="TIØ4295"
+      name="Bedriftsøkonomi"
+      credit="7.5"/>
+  <courses code="TDT4242"
+      name="Avansert programvareutvikling"
+      level="GRADUATE"
+      credit="7.5"/>
+  <courses code="TTM4135"
+      name="Anvendt kryptografi og nettverksikkerhet"
+      level="GRADUATE"
+      credit="7.5"/>
+  <courses code="TTK4852"
+      name="Eksperter i team - Maskinlæring"
+      level="GRADUATE"
+      credit="7.5"/>
+  <courses code="TDT4237"
+      name="Programvaresikkerhet"
+      level="GRADUATE"
+      credit="7.5"/>
+  <courses code="TDT4501"
+      name="Datateknologi, fordypningsprosjekt"
+      level="GRADUATE"
+      credit="15.0"/>
+  <courses code="TDT4506"
+      name="Datateknologi, fordypningsemne"
+      level="GRADUATE"
+      credit="7.5"/>
+  <courses code="TTM4165"
+      name="Digital økonomi"
+      credit="7.5"/>
+  <courses code="TDT4900"
+      name="Datateknologi, masteroppgave"
+      level="GRADUATE"
+      credit="30.0"/>
   <programs
-      name="Computer science"
+      name="Datateknologi"
       code="MTDT"
       numberOfSemesters="10">
     <specializations
-        name="Software Development"
-        semesters="//@programs.0/@semesters.0"/>
+        name="Programvaresystemer"
+        semesters="//@programs.0/@semesters.4 //@programs.0/@semesters.5"/>
+    <specializations
+        name="Programvareutvikling"
+        semesters="//@programs.0/@semesters.6 //@programs.0/@semesters.7 //@programs.0/@semesters.8 //@programs.0/@semesters.9"/>
     <semesters
-        semesterID="7">
+        semesterID="1">
       <courseGroups
-          courses="//@courses.0"/>
+          courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+    </semesters>
+    <semesters
+        semesterID="2">
+      <courseGroups
+          courses="//@courses.4 //@courses.5 //@courses.6 //@courses.7"/>
+    </semesters>
+    <semesters
+        semesterID="3">
+      <courseGroups
+          courses="//@courses.8 //@courses.9 //@courses.10 //@courses.11"/>
+    </semesters>
+    <semesters
+        semesterID="4">
+      <courseGroups
+          courses="//@courses.12 //@courses.13 //@courses.14 //@courses.15"/>
     </semesters>
     <semesters
         semesterID="5">
       <courseGroups
-          courses="//@courses.1"
+          courses="//@courses.16 //@courses.17 //@courses.18"/>
+      <courseGroups
+          courses="//@courses.19"
+          type="ELECTIVE_COLLISION_FREE"/>
+    </semesters>
+    <semesters
+        semesterID="6">
+      <courseGroups
+          courses="//@courses.20 //@courses.21 //@courses.22 //@courses.23"/>
+    </semesters>
+    <semesters
+        semesterID="7">
+      <courseGroups
+          courses="//@courses.24 //@courses.25"/>
+      <courseGroups
+          courses="//@courses.26"/>
+    </semesters>
+    <semesters
+        semesterID="8">
+      <courseGroups
+          courses="//@courses.27"/>
+      <courseGroups
+          courses="//@courses.30"
           type="ELECTIVE_COLLISION_FREE"/>
       <courseGroups
-          courses="//@courses.0"/>
+          courses="//@courses.28 //@courses.29"
+          type="ELECTIVE_CAN_COLLIDE"/>
+    </semesters>
+    <semesters
+        semesterID="9">
+      <courseGroups
+          courses="//@courses.31 //@courses.32"/>
+      <courseGroups
+          courses="//@courses.33"/>
+    </semesters>
+    <semesters
+        semesterID="10">
+      <courseGroups
+          courses="//@courses.34"/>
     </semesters>
   </programs>
 </sp:University>

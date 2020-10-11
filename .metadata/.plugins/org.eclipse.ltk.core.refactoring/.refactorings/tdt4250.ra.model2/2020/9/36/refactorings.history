@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;Department.xmi&apos; to &apos;tdt4250.ra.model/src/tdt4250.ra.example&apos;&#x0A;- Original project: &apos;tdt4250.ra.model&apos;&#x0A;- Destination element: &apos;tdt4250.ra.model/src/tdt4250.ra.example&apos;&#x0A;- Original element: &apos;Department.xmi&apos;" description="Copy file" destination="/src&lt;tdt4250.ra.example" element1="model/Department.xmi" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1599139887781" units="0" version="1.0"/>
-</session>

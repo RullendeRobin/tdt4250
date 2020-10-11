@@ -21,8 +21,8 @@
     <genClasses ecoreClass="sp.ecore#//Course">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//Course/code"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//Course/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//Course/credit"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//Course/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//Course/credit"/>
     </genClasses>
     <genClasses ecoreClass="sp.ecore#//Programme">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//Programme/name"/>
@@ -39,6 +39,8 @@
     <genClasses ecoreClass="sp.ecore#//University">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sp.ecore#//University/courses"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sp.ecore#//University/programs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//University/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sp.ecore#//University/shortName"/>
     </genClasses>
     <genClasses ecoreClass="sp.ecore#//CourseGroup">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sp.ecore#//CourseGroup/courses"/>
