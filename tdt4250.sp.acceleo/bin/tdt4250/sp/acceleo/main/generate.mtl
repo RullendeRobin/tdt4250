@@ -1,0 +1,65 @@
+[comment encoding = UTF-8 /]
+[module generate('tdt4250.sp.model/model/sp.ecore', 'http://www.eclipse.org/emf/2002/Ecore')]
+
+
+[template public generateHtml(university : University)]
+[comment @main /]
+[file (university.shortName.concat('.html'), false, 'UTF-8')]
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>[university.shortName/] Programmes</title>
+<style>
+div { padding: 16px; }
+</style>
+</head>
+
+<body>
+
+<h1> Studyprogramme: [university.programs.name/] </h1>
+
+[for (programme : Programme | university.programs)]
+	[generateProgrammeView(programme)/]
+	<hline/><br/>
+[/for]
+
+</body>
+</html>
+	[/file]
+[/template]
+
+[template public generateProgrammeView(programme: Programme)]
+	[for(semester : Semester | programme.semesters)]
+	<div class="semester">
+		
+		[for (specialization : Specialization | programme.specializations)]
+			[if ((specialization.semesters -> any(lambda | true)).semesterID = semester.semesterID)]
+				<h2>Specialization: [specialization.name/]</h2>
+				<hr>
+			[/if]
+		[/for]
+		
+		
+
+		<h2>[semester.semesterID/]. semester</h2>
+		<table class="semesterCourses">
+			<tr>
+    			<th>Emnekode</th>
+    			<th>Emnenavn</th>
+    			<th>SP</th>
+				<th>Status</th>
+  			</tr>
+			[for (courseGroup : CourseGroup | semester.courseGroups)]
+				[for (course : Course | courseGroup.courses)]
+					<tr>
+						<td>[course.code /]</td> 
+						<td>[course.name /]</td> 
+						<td>[course.credit /]</td> 
+						<td>[courseGroup.type /]</td> 
+					</tr>
+				[/for]
+			[/for]
+		</table>
+	</div>
+	[/for]
+[/template]
