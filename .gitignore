@@ -2,3 +2,15 @@
 .DS_Store
 
 .metadata/
+
+tdt4250.sp.xtext/
+
+tdt4250.sp.xtext.examples/
+
+tdt4250.sp.xtext.ide/
+
+tdt4250.sp.xtext.tests/
+
+tdt4250.sp.xtext.ui/
+
+tdt4250.sp.xtext.ui.tests/
